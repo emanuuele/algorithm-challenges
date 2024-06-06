@@ -7,7 +7,7 @@ for ($i = 0; sizeof($array) <= 100; $i++) {
             array_push($primes, $j);
         }
     }
-    if (sizeof($primes) == 2 || $i == 1) {
+    if (sizeof($primes) == 2) {
         array_push($array, $i);
     }
 }
