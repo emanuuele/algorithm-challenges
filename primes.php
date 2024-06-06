@@ -1,4 +1,6 @@
-for ($i = 0; $i <= 100; $i++) {
+<?php
+$array = array();
+for ($i = 0; sizeof($array) <= 100; $i++) {
     $primes = array();
     for ($j = 1; $j <= $i; $j++){
         if ($i % $j == 0) {
@@ -6,6 +8,9 @@ for ($i = 0; $i <= 100; $i++) {
         }
     }
     if (sizeof($primes) == 2 || $i == 1) {
-        echo "$i\n";
+        array_push($array, $i);
     }
+}
+foreach ($array as $prime) {
+    echo "$prime\n";
 }
